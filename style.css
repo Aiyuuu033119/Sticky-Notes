@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 92vh;
+  position: relative;
+  background-color: #89d880;
+  border: 4vh solid #b57a3d;
+  font-family: "Architects Daughter", cursive;
+  overflow-y: hidden;
+}
+
+button#add_note,button#submit {
+  padding: 10px 15px ;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 5px;
+  background: #89d880;
+  border: 1px solid white;
+  color: white;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transform: scale(1.0);
+  transition: all 300ms ease-in;
+}
+
+button#add_note:hover {
+  color: white;
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#modal {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#inner_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.container_modal{
+  width: 300px;
+  height: 250px;
+  background: white;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 4px 5px 20px 0px rgb(0 0 0 / 15%);
+  padding: 25px 25px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container_modal textarea {
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  outline-width: 0;
+  outline-color: unset;
+  border: 0 solid transparent;
+  resize: none;
+}
+
+.container_modal i {
+  position: absolute;
+  font-size: 1.4rem;
+  color: gray;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.container_modal i:hover {
+  color: lightgray;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+#header {
+  color: white;
+  padding: 0 30px;
+  min-height: 60px;
+  text-shadow: 1px 1px black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fas {
+  color: #c2ff3d;
+}
+
+.notes-container{
+  height: 92vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.notes-container::-webkit-scrollbar{
+  width: 5px;
+}
+
+.notes-container::-webkit-scrollbar-track{
+  background: #e9e9e9;
+}
+
+.notes-container::-webkit-scrollbar-thumb{
+  background: #414141;
+  border-radius: 20px;
+}
+
+#all_notes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.note {
+  width: 300px;
+  height: 300px;
+  transition: 2s;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  border-radius: 10px;
+  box-shadow: 4px 5px 20px 0px rgb(0 0 0 / 15%);
+}
+
+.note h1 {
+  font-size: 1.5rem;
+}
+
+.details {
+  margin-top: 25px;
+  padding: 0 15px;
+  font-size: 1.5rem;
+}
+
+.details i {
+  color: whitesmoke;
+  cursor: pointer;
+  text-shadow: 1px 1px #bbb;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

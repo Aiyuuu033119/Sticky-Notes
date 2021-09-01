@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="shortcut icon" type="image/png" href="notes.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>Sticky Notes</title>
+</head>
+
+<body>
+
+
+  <div id="modal" style="display: none;">
+    <div id="inner_modal">
+      <div class="container_modal">
+        <textarea placeholder="Note..." id="user_input" maxlength="160"></textarea>
+        <i class="far fa-times-circle" id="hide"></i>
+      </div>
+      <div style="width: 300px;padding: 0 25px 25px;background: white;display: flex;justify-content: center;border-radius: 0 0 10px 10px;">
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <section>
+      <div class="container notes-container">
+        <div id="header">
+          <h1><i class="fas fa-sticky-note"></i> Sticky Notes</h1>
+          <button id="add_note">Add Note</button>
+        </div>
+        <div id="all_notes"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
